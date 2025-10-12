@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Tomato Pasta",
+    "image": "https://placehold.co/600x400/f87171/ffffff?text=Pasta",
+    "ingredients": ["pasta", "tomato", "onion", "garlic", "olive oil", "basil"],
+    "steps": "1. Cook pasta. 2. Sauté onion and garlic... 3. Add tomatoes...",
+    "cookingTime": 25,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 450, "protein": "15g" }
+  },
+  {
+    "id": 2,
+    "name": "Chicken Salad",
+    "image": "https://placehold.co/600x400/60a5fa/ffffff?text=Salad",
+    "ingredients": ["chicken breast", "lettuce", "tomato", "cucumber", "olive oil"],
+    "steps": "1. Cook chicken. 2. Chop vegetables...",
+    "cookingTime": 20,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 350, "protein": "30g" }
+  },
+  {
+    "id": 3,
+    "name": "Spicy Beef Tacos",
+    "image": "https://placehold.co/600x400/fb923c/ffffff?text=Tacos",
+    "ingredients": ["ground beef", "taco shells", "lettuce", "cheese", "salsa", "jalapenos"],
+    "steps": "1. Cook beef with spices. 2. Assemble tacos.",
+    "cookingTime": 30,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 550, "protein": "25g" }
+  },
+  {
+    "id": 4,
+    "name": "Vegetable Stir-fry",
+    "image": "https://placehold.co/600x400/34d399/ffffff?text=Stir-fry",
+    "ingredients": ["broccoli", "bell pepper", "carrot", "soy sauce", "ginger", "garlic"],
+    "steps": "1. Chop vegetables. 2. Stir-fry in a wok with sauces.",
+    "cookingTime": 15,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 300, "protein": "10g" }
+  }
+]
