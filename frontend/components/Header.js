@@ -10,28 +10,30 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-40">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-emerald-400">
-            RecipeGen
+      <header className="bg-gray-950/70 backdrop-blur supports-[backdrop-filter]:bg-gray-950/50 sticky top-0 z-40 border-b border-white/10">
+        <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
+          <Link href="/" className="group inline-flex items-center gap-2">
+            <span className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 shadow ring-1 ring-white/10" />
+            <span className="text-xl font-bold tracking-tight bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent">RecipeGen</span>
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link href="/" className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-md hover:bg-white/5">
+              Discover
+            </Link>
+            <Link href="/cookbook" className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-gray-300 hover:text-white rounded-md hover:bg-white/5">
+              My Cookbook
+            </Link>
             {token ? (
-              <>
-                <Link href="/cookbook" className="font-semibold text-gray-200 hover:text-emerald-400 transition-colors">
-                  My Cookbook
-                </Link>
-                <button
-                  onClick={logout}
-                  className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700"
-                >
-                  Logout
-                </button>
-              </>
+              <button
+                onClick={logout}
+                className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/50"
+              >
+                Logout
+              </button>
             ) : (
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-4 py-2 bg-emerald-600 text-white font-semibold rounded-md hover:bg-emerald-700"
+                className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50"
               >
                 Login / Sign Up
               </button>

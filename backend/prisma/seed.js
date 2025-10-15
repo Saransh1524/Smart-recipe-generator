@@ -10,21 +10,26 @@ const { PrismaClient } = require('@prisma/client');
       const dbPath = path.join(__dirname, '..', 'database.json');
       const recipesData = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
 
-      for (const recipe of recipesData) {
-        await prisma.recipe.create({
-          data: {
-            id: recipe.id,
-            name: recipe.name,
-            image: recipe.image,
-            ingredients: recipe.ingredients,
-            instructions: recipe.instructions,
-            cookingTime: recipe.cookingTime,
-            difficulty: recipe.difficulty,
-            nutritionalInfo: recipe.nutritionalInfo,
-            dietaryTags: recipe.dietaryTags || [],
-          },
-        });
-      }
+      // Clear existing recipes to avoid unique id conflicts
+      await prisma.rating.deleteMany();
+      await prisma.favorite.deleteMany();
+      await prisma.recipe.deleteMany();
+
+      // Normalize data and insert in bulk
+      const data = recipesData.map(r => ({
+        id: r.id,
+        name: r.name,
+        image: r.image,
+        ingredients: r.ingredients || [],
+        instructions: r.instructions || [],
+        cookingTime: r.cookingTime,
+        difficulty: r.difficulty,
+        nutritionalInfo: r.nutritionalInfo || {},
+        dietaryTags: r.dietaryTags || [],
+      }));
+
+      await prisma.recipe.createMany({ data });
+
       console.log('Seeding finished.');
     }
 

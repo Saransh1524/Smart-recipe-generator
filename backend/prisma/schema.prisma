@@ -1,39 +1,56 @@
-    generator client {
-      provider = "prisma-client-js"
-    }
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-    datasource db {
-      provider = "postgresql"
-      url      = env("DATABASE_URL")
-    }
+generator client {
+  provider = "prisma-client-js"
+}
 
-    model User {
-      id        String     @id @default(cuid())
-      email     String     @unique
-      password  String
-      createdAt DateTime   @default(now())
-      favorites Favorite[]
-    }
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
-    model Recipe {
-      id                Int        @id @default(autoincrement())
-      name              String
-      image             String
-      ingredients       String[]
-      instructions      String[]
-      cookingTime       Int
-      difficulty        String
-      nutritionalInfo   Json
-      dietaryTags       String[]
-      favoritedBy       Favorite[]
-    }
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  password  String
+  createdAt DateTime   @default(now())
+  favorites Favorite[]
+  ratings   Rating[] // Add relation to Ratings
+}
 
-    model Favorite {
-      user     User     @relation(fields: [userId], references: [id])
-      userId   String
-      recipe   Recipe   @relation(fields: [recipeId], references: [id])
-      recipeId Int
-      assignedAt DateTime @default(now())
+model Recipe {
+  id                Int        @id @default(autoincrement())
+  name              String
+  image             String
+  ingredients       String[]
+  instructions      String[]
+  cookingTime       Int
+  difficulty        String
+  nutritionalInfo   Json
+  dietaryTags       String[]
+  favoritedBy       Favorite[]
+  ratings           Rating[] // Add relation to Ratings
+}
 
-      @@id([userId, recipeId])
-    }
+model Favorite {
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  recipe     Recipe   @relation(fields: [recipeId], references: [id])
+  recipeId   Int
+  assignedAt DateTime @default(now())
+
+  @@id([userId, recipeId])
+}
+
+// --- NEW Rating Model ---
+model Rating {
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  recipe    Recipe   @relation(fields: [recipeId], references: [id])
+  recipeId  Int
+  value     Int // The rating value, e.g., 1 to 5
+  createdAt DateTime @default(now())
+
+  @@id([userId, recipeId]) // A user can only rate a recipe once
+}

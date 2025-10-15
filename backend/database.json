@@ -3,40 +3,329 @@
     "id": 1,
     "name": "Classic Tomato Pasta",
     "image": "https://placehold.co/600x400/f87171/ffffff?text=Pasta",
-    "ingredients": ["pasta", "tomato", "onion", "garlic", "olive oil", "basil"],
-    "steps": "1. Cook pasta. 2. Sauté onion and garlic... 3. Add tomatoes...",
+    "ingredients": ["pasta", "tomato", "onion", "garlic", "olive oil", "basil", "salt", "pepper"],
+    "instructions": [
+      "Bring a large pot of salted water to a boil and cook pasta until al dente.",
+      "Meanwhile, heat olive oil in a pan and sauté chopped onion until translucent.",
+      "Add minced garlic and cook until fragrant, about 30 seconds.",
+      "Stir in chopped tomatoes and simmer for 8–10 minutes; season with salt and pepper.",
+      "Drain pasta, add to the sauce with torn basil, and toss to coat.",
+      "Serve hot with extra basil and a drizzle of olive oil."
+    ],
     "cookingTime": 25,
     "difficulty": "Easy",
-    "nutritionalInfo": { "calories": 450, "protein": "15g" }
+    "nutritionalInfo": { "calories": 450, "protein": "15g", "carbs": "65g", "fat": "12g" },
+    "dietaryTags": ["Vegetarian"]
   },
   {
     "id": 2,
-    "name": "Chicken Salad",
+    "name": "Grilled Chicken Salad",
     "image": "https://placehold.co/600x400/60a5fa/ffffff?text=Salad",
-    "ingredients": ["chicken breast", "lettuce", "tomato", "cucumber", "olive oil"],
-    "steps": "1. Cook chicken. 2. Chop vegetables...",
+    "ingredients": ["chicken breast", "romaine", "tomato", "cucumber", "olive oil", "lemon", "salt", "pepper"],
+    "instructions": [
+      "Season chicken with salt and pepper; grill or pan-sear until cooked through.",
+      "Let chicken rest, then slice thinly.",
+      "Chop romaine, tomato, and cucumber; add to a large bowl.",
+      "Whisk olive oil and lemon juice with a pinch of salt for dressing.",
+      "Toss vegetables with dressing; top with sliced chicken and serve."
+    ],
     "cookingTime": 20,
     "difficulty": "Easy",
-    "nutritionalInfo": { "calories": 350, "protein": "30g" }
+    "nutritionalInfo": { "calories": 360, "protein": "32g", "carbs": "10g", "fat": "20g" },
+    "dietaryTags": ["Gluten-Free"]
   },
   {
     "id": 3,
     "name": "Spicy Beef Tacos",
     "image": "https://placehold.co/600x400/fb923c/ffffff?text=Tacos",
-    "ingredients": ["ground beef", "taco shells", "lettuce", "cheese", "salsa", "jalapenos"],
-    "steps": "1. Cook beef with spices. 2. Assemble tacos.",
+    "ingredients": ["ground beef", "taco shells", "lettuce", "cheddar", "salsa", "jalapenos", "cumin", "paprika", "salt"],
+    "instructions": [
+      "Brown ground beef in a skillet; drain excess fat.",
+      "Stir in cumin, paprika, salt, and a spoon of salsa; simmer 3–4 minutes.",
+      "Warm taco shells; fill with beef, shredded lettuce, cheese, and jalapeños.",
+      "Serve with extra salsa."
+    ],
     "cookingTime": 30,
     "difficulty": "Medium",
-    "nutritionalInfo": { "calories": 550, "protein": "25g" }
+    "nutritionalInfo": { "calories": 520, "protein": "26g", "carbs": "38g", "fat": "28g" },
+    "dietaryTags": []
   },
   {
     "id": 4,
     "name": "Vegetable Stir-fry",
     "image": "https://placehold.co/600x400/34d399/ffffff?text=Stir-fry",
-    "ingredients": ["broccoli", "bell pepper", "carrot", "soy sauce", "ginger", "garlic"],
-    "steps": "1. Chop vegetables. 2. Stir-fry in a wok with sauces.",
+    "ingredients": ["broccoli", "bell pepper", "carrot", "soy sauce", "ginger", "garlic", "sesame oil"],
+    "instructions": [
+      "Heat oil in a wok; add minced garlic and ginger; stir for 20 seconds.",
+      "Add sliced vegetables; stir-fry over high heat until crisp-tender.",
+      "Splash in soy sauce; toss to coat; finish with a few drops of sesame oil.",
+      "Serve immediately with rice or noodles."
+    ],
     "cookingTime": 15,
     "difficulty": "Easy",
-    "nutritionalInfo": { "calories": 300, "protein": "10g" }
+    "nutritionalInfo": { "calories": 300, "protein": "10g", "carbs": "35g", "fat": "12g" },
+    "dietaryTags": ["Vegetarian", "Vegan"]
+  },
+  {
+    "id": 5,
+    "name": "Herb Omelette",
+    "image": "https://placehold.co/600x400/f59e0b/ffffff?text=Omelette",
+    "ingredients": ["eggs", "milk", "butter", "chives", "parsley", "salt", "pepper"],
+    "instructions": [
+      "Whisk eggs with a splash of milk, salt, and pepper.",
+      "Melt butter in a nonstick pan over medium heat.",
+      "Pour in eggs; gently stir, then smooth into an even layer.",
+      "Sprinkle herbs; fold omelette and cook to desired doneness." 
+    ],
+    "cookingTime": 10,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 280, "protein": "18g", "carbs": "2g", "fat": "22g" },
+    "dietaryTags": ["Gluten-Free"]
+  },
+  {
+    "id": 6,
+    "name": "Garlic Butter Shrimp",
+    "image": "https://placehold.co/600x400/10b981/ffffff?text=Shrimp",
+    "ingredients": ["shrimp", "butter", "garlic", "lemon", "parsley", "salt", "pepper"],
+    "instructions": [
+      "Pat shrimp dry; season with salt and pepper.",
+      "Melt butter in a skillet; sauté garlic until fragrant.",
+      "Add shrimp; cook until pink, 1–2 minutes per side.",
+      "Finish with lemon juice and chopped parsley; serve." 
+    ],
+    "cookingTime": 12,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 260, "protein": "24g", "carbs": "2g", "fat": "16g" },
+    "dietaryTags": ["Gluten-Free"]
+  },
+  {
+    "id": 7,
+    "name": "Quinoa Buddha Bowl",
+    "image": "https://placehold.co/600x400/3b82f6/ffffff?text=Bowl",
+    "ingredients": ["quinoa", "chickpeas", "spinach", "roasted sweet potato", "tahini", "lemon", "olive oil", "salt"],
+    "instructions": [
+      "Cook quinoa according to package directions; fluff with a fork.",
+      "Roast sweet potato cubes until tender; season lightly.",
+      "Whisk tahini with lemon juice, water, and salt to make a dressing.",
+      "Assemble bowl with quinoa, chickpeas, spinach, sweet potato; drizzle dressing." 
+    ],
+    "cookingTime": 30,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 520, "protein": "18g", "carbs": "70g", "fat": "18g" },
+    "dietaryTags": ["Vegetarian", "Vegan", "Gluten-Free"]
+  },
+  {
+    "id": 8,
+    "name": "Beef Bolognese",
+    "image": "https://placehold.co/600x400/ef4444/ffffff?text=Bolognese",
+    "ingredients": ["ground beef", "onion", "carrot", "celery", "tomato paste", "canned tomatoes", "garlic", "olive oil", "salt", "pepper"],
+    "instructions": [
+      "Sauté onion, carrot, and celery in olive oil until softened.",
+      "Add ground beef; cook until browned; stir in tomato paste.",
+      "Add canned tomatoes; simmer 25–30 minutes; season to taste.",
+      "Serve over pasta with grated cheese." 
+    ],
+    "cookingTime": 45,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 620, "protein": "30g", "carbs": "60g", "fat": "28g" },
+    "dietaryTags": []
+  },
+  {
+    "id": 9,
+    "name": "Creamy Mushroom Risotto",
+    "image": "https://placehold.co/600x400/6b7280/ffffff?text=Risotto",
+    "ingredients": ["arborio rice", "mushrooms", "onion", "garlic", "vegetable broth", "white wine", "butter", "parmesan", "olive oil"],
+    "instructions": [
+      "Heat broth in a pot; keep warm.",
+      "Sauté onion and mushrooms in olive oil; add garlic briefly.",
+      "Stir in rice; toast 1–2 minutes; deglaze with wine.",
+      "Add warm broth a ladle at a time, stirring until absorbed; repeat until creamy.",
+      "Finish with butter and parmesan; season and serve." 
+    ],
+    "cookingTime": 35,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 540, "protein": "14g", "carbs": "78g", "fat": "18g" },
+    "dietaryTags": ["Vegetarian"]
+  },
+  {
+    "id": 10,
+    "name": "Pan-Seared Salmon",
+    "image": "https://placehold.co/600x400/f472b6/ffffff?text=Salmon",
+    "ingredients": ["salmon fillets", "olive oil", "lemon", "garlic", "dill", "salt", "pepper"],
+    "instructions": [
+      "Pat salmon dry; season with salt and pepper.",
+      "Heat oil in a skillet; sear salmon skin-side down until crisp; flip and finish.",
+      "Add minced garlic and lemon slices; baste briefly; serve with dill." 
+    ],
+    "cookingTime": 15,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 420, "protein": "34g", "carbs": "1g", "fat": "28g" },
+    "dietaryTags": ["Gluten-Free"]
+  },
+  {
+    "id": 11,
+    "name": "Margherita Pizza",
+    "image": "https://placehold.co/600x400/facc15/000000?text=Pizza",
+    "ingredients": ["pizza dough", "tomato sauce", "mozzarella", "basil", "olive oil", "salt"],
+    "instructions": [
+      "Preheat oven with a stone to 250°C/480°F.",
+      "Stretch dough; spread tomato sauce thinly.",
+      "Top with torn mozzarella and basil; drizzle olive oil and season.",
+      "Bake until crust is blistered and cheese melted." 
+    ],
+    "cookingTime": 18,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 620, "protein": "25g", "carbs": "78g", "fat": "20g" },
+    "dietaryTags": ["Vegetarian"]
+  },
+  {
+    "id": 12,
+    "name": "Lentil Soup",
+    "image": "https://placehold.co/600x400/a3e635/000000?text=Soup",
+    "ingredients": ["red lentils", "onion", "carrot", "celery", "garlic", "cumin", "tomato paste", "vegetable broth", "lemon"],
+    "instructions": [
+      "Sauté onion, carrot, and celery; add garlic and cumin briefly.",
+      "Stir in tomato paste; add lentils and broth; simmer until tender.",
+      "Blend partially for creaminess; finish with lemon juice and salt." 
+    ],
+    "cookingTime": 35,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 380, "protein": "20g", "carbs": "60g", "fat": "6g" },
+    "dietaryTags": ["Vegetarian", "Vegan", "Gluten-Free"]
+  },
+  {
+    "id": 13,
+    "name": "Thai Green Curry",
+    "image": "https://placehold.co/600x400/22c55e/ffffff?text=Curry",
+    "ingredients": ["chicken thigh", "green curry paste", "coconut milk", "eggplant", "bell pepper", "fish sauce", "basil"],
+    "instructions": [
+      "Sauté curry paste in a little oil until fragrant.",
+      "Add coconut milk; bring to a simmer; add chicken and vegetables.",
+      "Cook until chicken is done; season with fish sauce; finish with basil." 
+    ],
+    "cookingTime": 30,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 590, "protein": "28g", "carbs": "20g", "fat": "42g" },
+    "dietaryTags": ["Gluten-Free"]
+  },
+  {
+    "id": 14,
+    "name": "Tofu Peanut Noodles",
+    "image": "https://placehold.co/600x400/7c3aed/ffffff?text=Noodles",
+    "ingredients": ["rice noodles", "tofu", "peanut butter", "soy sauce", "lime", "garlic", "chili flakes", "scallions"],
+    "instructions": [
+      "Cook noodles according to package; rinse briefly.",
+      "Pan-fry tofu cubes until golden; season lightly.",
+      "Whisk peanut butter, soy sauce, lime juice, and chili flakes with warm water.",
+      "Toss noodles with sauce, tofu, and sliced scallions; serve." 
+    ],
+    "cookingTime": 20,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 610, "protein": "24g", "carbs": "80g", "fat": "22g" },
+    "dietaryTags": ["Vegetarian", "Vegan"]
+  },
+  {
+    "id": 15,
+    "name": "Greek Yogurt Parfait",
+    "image": "https://placehold.co/600x400/06b6d4/ffffff?text=Parfait",
+    "ingredients": ["greek yogurt", "honey", "granola", "berries", "mint"],
+    "instructions": [
+      "Layer yogurt in a glass; drizzle with honey.",
+      "Add granola and fresh berries; garnish with mint; serve cold." 
+    ],
+    "cookingTime": 5,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 280, "protein": "15g", "carbs": "38g", "fat": "8g" },
+    "dietaryTags": []
+  },
+  {
+    "id": 16,
+    "name": "BBQ Pulled Pork Sandwich",
+    "image": "https://placehold.co/600x400/ef4444/ffffff?text=BBQ",
+    "ingredients": ["pork shoulder", "bbq sauce", "onion", "garlic", "brioche buns", "coleslaw"],
+    "instructions": [
+      "Slow-cook pork with onion and garlic until fork-tender.",
+      "Shred pork; toss with BBQ sauce.",
+      "Pile onto toasted buns; top with coleslaw; serve." 
+    ],
+    "cookingTime": 240,
+    "difficulty": "Medium",
+    "nutritionalInfo": { "calories": 720, "protein": "36g", "carbs": "62g", "fat": "36g" },
+    "dietaryTags": []
+  },
+  {
+    "id": 17,
+    "name": "Caprese Salad",
+    "image": "https://placehold.co/600x400/84cc16/000000?text=Caprese",
+    "ingredients": ["tomato", "mozzarella", "basil", "olive oil", "balsamic", "salt", "pepper"],
+    "instructions": [
+      "Slice tomatoes and mozzarella; layer with basil leaves.",
+      "Drizzle olive oil and balsamic; season with salt and pepper; serve." 
+    ],
+    "cookingTime": 8,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 320, "protein": "16g", "carbs": "10g", "fat": "24g" },
+    "dietaryTags": ["Vegetarian", "Gluten-Free"]
+  },
+  {
+    "id": 18,
+    "name": "Shakshuka",
+    "image": "https://placehold.co/600x400/f97316/ffffff?text=Shakshuka",
+    "ingredients": ["eggs", "tomatoes", "onion", "bell pepper", "garlic", "paprika", "cumin", "olive oil"],
+    "instructions": [
+      "Sauté onion and pepper; add garlic, paprika, and cumin.",
+      "Add tomatoes; simmer until thickened.",
+      "Make wells; crack eggs; cover and cook until set to preference." 
+    ],
+    "cookingTime": 25,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 380, "protein": "20g", "carbs": "18g", "fat": "24g" },
+    "dietaryTags": ["Gluten-Free", "Vegetarian"]
+  },
+  {
+    "id": 19,
+    "name": "Teriyaki Chicken Rice Bowl",
+    "image": "https://placehold.co/600x400/14b8a6/ffffff?text=Teriyaki",
+    "ingredients": ["chicken thigh", "soy sauce", "mirin", "sugar", "ginger", "garlic", "rice", "broccoli"],
+    "instructions": [
+      "Whisk soy sauce, mirin, sugar, ginger, and garlic for teriyaki sauce.",
+      "Cook chicken; pour in sauce; simmer to thicken and glaze.",
+      "Serve over steamed rice with blanched broccoli." 
+    ],
+    "cookingTime": 30,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 640, "protein": "32g", "carbs": "82g", "fat": "18g" },
+    "dietaryTags": []
+  },
+  {
+    "id": 20,
+    "name": "Veggie Chili",
+    "image": "https://placehold.co/600x400/ef4444/ffffff?text=Chili",
+    "ingredients": ["kidney beans", "black beans", "tomatoes", "onion", "bell pepper", "garlic", "chili powder", "cumin"],
+    "instructions": [
+      "Sauté onion and pepper; add garlic, chili powder, and cumin.",
+      "Add beans and tomatoes; simmer 25–30 minutes; season to taste.",
+      "Serve with toppings like cilantro or sour cream (optional)." 
+    ],
+    "cookingTime": 40,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 480, "protein": "20g", "carbs": "70g", "fat": "10g" },
+    "dietaryTags": ["Vegetarian", "Vegan", "Gluten-Free"]
+  },
+  {
+    "id": 21,
+    "name": "Pesto Pasta with Chicken",
+    "image": "https://placehold.co/600x400/22c55e/ffffff?text=Pesto",
+    "ingredients": ["pasta", "chicken breast", "basil", "pine nuts", "parmesan", "garlic", "olive oil", "lemon"],
+    "instructions": [
+      "Blend basil, pine nuts, parmesan, garlic, olive oil, and lemon juice to make pesto.",
+      "Cook pasta; reserve some pasta water.",
+      "Sear sliced chicken until cooked; toss pasta with pesto, chicken, and a splash of pasta water.",
+      "Serve with extra parmesan." 
+    ],
+    "cookingTime": 25,
+    "difficulty": "Easy",
+    "nutritionalInfo": { "calories": 640, "protein": "34g", "carbs": "72g", "fat": "22g" },
+    "dietaryTags": []
   }
 ]
