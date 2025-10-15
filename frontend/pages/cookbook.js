@@ -45,18 +45,15 @@ export default function Cookbook() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Access Denied</h2>
           <p className="text-gray-400 mb-6">Please log in to view your cookbook.</p>
-          {/* We can add a login button here later if we want */}
         </div>
       </div>
     );
   }
 
-  // If data is loading
   if (loading) {
     return <div className="min-h-screen bg-gray-900 text-white text-center pt-10"><p>Loading your cookbook...</p></div>;
   }
 
-  // If there was an error
   if (error) {
     return <div className="min-h-screen bg-gray-900 text-white text-center pt-10"><p className="text-red-500">Error: {error}</p></div>;
   }
@@ -74,7 +71,7 @@ export default function Cookbook() {
           </div>
         ) : (
           <div className="text-center text-gray-400">
-            <p className="mb-4">You haven't saved any recipes yet.</p>
+            <p className="mb-4">You haven&apos;t saved any recipes yet.</p>
             <Link href="/" className="text-emerald-400 font-semibold hover:underline">
               Discover Recipes
             </Link>
@@ -84,3 +81,4 @@ export default function Cookbook() {
     </div>
   );
 }
+
