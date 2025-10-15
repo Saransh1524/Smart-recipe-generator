@@ -12,7 +12,8 @@ export default function AuthModal({ onClose }) {
     e.preventDefault();
     setError('');
 
-    const url = isLogin ? 'http://localhost:3001/api/auth/login' : 'http://localhost:3001/api/auth/signup';
+    const base = process.env.NEXT_PUBLIC_API_BASE_URL;
+    const url = isLogin ? `${base}/api/auth/login` : `${base}/api/auth/signup`;
     
     try {
       const response = await fetch(url, {

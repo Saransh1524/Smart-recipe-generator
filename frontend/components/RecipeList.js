@@ -16,7 +16,8 @@
         if (filters.maxCookingTime) params.append('maxCookingTime', filters.maxCookingTime);
         if (filters.dietary) params.append('dietary', filters.dietary);
         
-        const url = `http://localhost:3001/api/recipes?${params.toString()}`;
+        const base = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const url = `${base}/api/recipes?${params.toString()}`;
           
         fetch(url)
           .then(res => {

@@ -46,7 +46,7 @@ export default function IngredientInput({ onSearch }) {
     formData.append('image', imageFile);
 
     try {
-      const response = await fetch('http://localhost:3001/api/ingredients/recognize-image', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/ingredients/recognize-image`, {
         method: 'POST',
         body: formData,
       });

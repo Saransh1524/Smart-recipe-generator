@@ -19,7 +19,7 @@ export default function RecipeCard({ recipe }) {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/users/me/favorites', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/me/favorites`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

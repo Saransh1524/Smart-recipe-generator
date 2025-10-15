@@ -12,13 +12,13 @@ export default function Cookbook() {
   useEffect(() => {
     if (!token) {
       setLoading(false);
-      return; // Don't fetch if there's no token
+      return;
     }
 
     const fetchFavorites = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:3001/api/users/me/favorites', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/me/favorites`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

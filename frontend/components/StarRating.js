@@ -29,7 +29,7 @@ export default function StarRating({ recipeId, onRatingSubmitted }) {
     }
     
     try {
-        const response = await fetch(`http://localhost:3001/api/recipes/${recipeId}/rate`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/recipes/${recipeId}/rate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
