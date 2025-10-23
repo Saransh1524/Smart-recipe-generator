@@ -23,8 +23,27 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 
 // --- Middleware ---
-app.use(cors());
+
+// --- CORS Configuration ---
+const whitelist = [
+  'http://localhost:3000', // For local development
+  'https://smart-recipe-generator-gilt.vercel.app' // YOUR LIVE FRONTEND URL
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Check if the incoming origin is in our whitelist
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+app.use(cors(corsOptions)); // Use the secure options instead of app.use(cors())
 app.use(express.json());
+
 // Auth middleware (shared)
 const jwt = require('jsonwebtoken');
 const authenticateToken = (req, res, next) => {
